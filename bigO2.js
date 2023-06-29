@@ -18,6 +18,6 @@ function anotherFunChallenge(input) {
   let whoAmI = 'I don\'t know'; // O(1)
 } 
 
-const arr = [1,2,3,4,5,6];
-console.log(anotherFunChallenge(arr));
+const arri = [1,2,3,4,5,6];
+console.log(anotherFunChallenge(arri));
 // R: BIG O(4 + 5n);  => BIG O(n)
