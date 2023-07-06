@@ -43,5 +43,6 @@ myhHashTable.set('apples', 1257);
 myhHashTable.set('oranges', 45);
 myhHashTable.set('tangerines', 17);
 myhHashTable.set('mango', 90);
+myhHashTable.set('papay', 112);
 console.log(myhHashTable.get('apples'));
 console.log(myhHashTable.keys());
