@@ -2,9 +2,9 @@
 
 // https://leetcode.com/problems/maximum-subarray/description/
 //  given an array of ints,  find the subarray with the largest sum,  return it's sum.
-const array = [-2,1,-3,4,-1,2,1,-5,4];
+const array1 = [-2,1,-3,4,-1,2,1,-5,4];
 // R : 6
-//const array = [5,4,-1,7,8];
+//const array1 = [5,4,-1,7,8];
 // R = 23
 
 const returnLargestSum = async (arr) => {
@@ -12,7 +12,6 @@ const returnLargestSum = async (arr) => {
 }
 
 (async () => {
-  await returnLargestSum(array);
+  await returnLargestSum(array1);
 })();
-
-//console.log(returnLargestSum(array))
+//console.log(returnLargestSum(array1))
