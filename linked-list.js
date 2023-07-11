@@ -75,7 +75,26 @@ class LinkedList {
     this.length--;
     return this.printList();
   }
+  
+  reverse() {
+    if (!this.head.next) {
+      return this;
+    }
+    let firstItem = this.head;
+    this.tail = this.head;
+    let secondItem = firstItem.next;
 
+    while (secondItem) {
+      let temp = secondItem.next;
+      secondItem.next = firstItem;
+      firstItem = secondItem;
+      secondItem = temp;
+    }
+    this.head.next = null;
+    this.head = firstItem;
+    //return this;
+    return this.printList();
+  }
 }
 
 class DoublyNode {
@@ -164,19 +183,20 @@ class DoublyLinkedList {
 }
 
 // 1-->10-->5-->16
-//const linkedList = new LinkedList(10);
-//linkedList.append(5);
-//linkedList.append(16);
-//linkedList.prepend(1);
-//linkedList.insert(200, 99);
-//linkedList.insert(2, 77);
-//linkedList.remove(3);
-//console.log(linkedList.printList());
-const doublyLinkedList = new DoublyLinkedList(7);
-doublyLinkedList.append(19);
-doublyLinkedList.prepend(1);
-doublyLinkedList.insert(2, 48);
-//doublyLinkedList.insert(1, 24);
-doublyLinkedList.remove(1);
-console.log(doublyLinkedList);
-console.log(doublyLinkedList.printList())
+const linkedList = new LinkedList(10);
+linkedList.append(5);
+linkedList.prepend(1);
+linkedList.insert(200, 99);
+linkedList.insert(2, 77);
+linkedList.remove(3);
+console.log(linkedList.printList());
+linkedList.reverse();
+console.log(linkedList.printList());
+//const doublyLinkedList = new DoublyLinkedList(7);
+//doublyLinkedList.append(19);
+//doublyLinkedList.prepend(1);
+//doublyLinkedList.insert(2, 48);
+////doublyLinkedList.insert(1, 24);
+//doublyLinkedList.remove(1);
+//console.log(doublyLinkedList);
+//console.log(doublyLinkedList.printList())
