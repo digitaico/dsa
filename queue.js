@@ -82,6 +82,39 @@ class QueueArray {
   }
 }
 
+class QueueUsingStack {
+  constructor () {
+    this.first = null;
+    this.last = null;
+    this.length = 0;
+    this.firstStack = [];
+    this.secondStack = [];
+  }
+
+  push(value) {
+    this.firstStack.push(value)
+    return this;
+  } 
+
+  pop() {
+    this.prepare();
+    this.secondStack.pop();
+    return this;
+  }
+
+  peek() {
+    this.prepare();
+    return this.secondStack[this.secondStack.length - 1];
+  }
+
+  prepare() {
+    if(this.secondStack.length === 0) {
+      while (this.firstStack.length > 0) {
+        this.secondStack.push(this.firstStack.pop());
+      }
+    }
+  }
+}
 
 const myQueue = new Queue();
 //console.log(myQueue.isEmpty());
