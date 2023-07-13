@@ -59,6 +59,31 @@ class Stack {
   }
 }
 
+class StackArray {
+  constructor() {
+    this.array = [];
+  }
+
+  push(value) {
+    this.array.push(value);
+    return this;
+  }
+
+  peek() {
+    return this.array[this.array.length - 1];
+  }
+
+  pop() {
+    this.array.pop();
+    return this;
+  }
+
+  printStack () {
+    return this.array;
+  }
+}
+
+
 const myStack = new Stack();
 console.log(myStack.isEmpty());
 myStack.push('Google');
