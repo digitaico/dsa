@@ -116,7 +116,12 @@ class BinarySearchTree {
   }
 
 }
-
+function traverse(node) {
+  const tree = { value: node.value };
+  tree.left = node.left === null ? null : traverse(node.left);
+  tree.right = node.right === null ? null : traverse(node.right);
+  return tree;
+}
 //      9
 //   4      20
 // 1   6  15   170
@@ -124,12 +129,13 @@ class BinarySearchTree {
 const tree = new BinarySearchTree();
 tree.insert(9);
 tree.insert(4);
-console.log(tree.traverse());
+//console.log(tree.traverse());
 tree.insert(20);
 tree.insert(15);
 tree.insert(170);
 tree.insert(1);
 tree.insert(6);
-tree.remove(6);
+//tree.remove(6);
 //console.log(tree.lookup(20));
 console.log(JSON.stringify(tree, null, 2));
+//console.log(JSON.stringify(traverse(tree.root), null, 2));
