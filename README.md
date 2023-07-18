@@ -2,7 +2,11 @@
 Data Structures and Algorithms
 
 ## Description
-Tested scripts while training DSA,  dynamic programming.
+ES6 implementation of native and non-native data structures and algorithms.
+- Arrays
+- Hash Maps
+- Trees
+
 
 ## Source
 ZeroToMastery
